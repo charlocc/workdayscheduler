@@ -1,13 +1,12 @@
-var saveBtn=document.querySelector(".saveBtn"); 
-var nineAM = document.querySelector(".nine-AM");
-var tenAM = document.querySelector(".ten-AM");
-var elevenAM = document.querySelector(".eleven-AM");
-var twelvePM = document.querySelector(".twelve-PM");
-var onePM = document.querySelector(".one-PM");
-var twoPM = document.querySelector(".two-PM");
-var threePM = document.querySelector(".three-PM");
-var fourPM = document.querySelector(".four-PM");
-var fivePM = document.querySelector(".five-PM");
+var nineAM = document.querySelector("#nine-AM");
+var tenAM = document.querySelector("#ten-AM");
+var elevenAM = document.querySelector("#eleven-AM");
+var twelvePM = document.querySelector("#twelve-PM");
+// var onePM = document.querySelector(".one-PM");
+// var twoPM = document.querySelector(".two-PM");
+// var threePM = document.querySelector(".three-PM");
+// var fourPM = document.querySelector(".four-PM");
+// var fivePM = document.querySelector(".five-PM");
 
 
 
@@ -20,21 +19,22 @@ function displayTime (){var currentTime = moment()
 var time = moment().format("H");
 console.log(time);
 
-// Local storage 
-var nineInput = document.querySelector('[name="nineinput"]').value;
+// Local storage
+$(".saveBtn").on("click", function () {
+    var taskInput = $(this).siblings(".tasks").val();
+    var hour = $(this).parent().attr("id");
+    localStorage.setItem(hour, taskInput);
 
-saveBtn.addEventListener("click",function(){
-    if(nineInput !=null) {
-        localStorage.setItem("nineTask", nineInput);
-    }
-    var storedNineInput = localStorage.getItem("nineTask");
-    var nineInputp  = document.createElement('p');
-    nineInputp.value= storedNineInput;
-    nineAM.appendChild(nineInputp);
 });
 
-// Colorcoding
+// Set the value of the text area to the stored value of text from the hour
+$("#nine-AM .tasks").val(localStorage.getItem("nine-AM"));
+$("#ten-AM .tasks").val(localStorage.getItem("ten-AM"));
+$("#eleven-AM .tasks").val(localStorage.getItem("eleven-AM"));
+$("#twelve-PM .tasks").val(localStorage.getItem("twelve-PM"));
+$("#one-PM .tasks").val(localStorage.getItem("one-PM"));
 
+// Colorcoding
 function nineColor(){
     if(time>9) {
         nineAM.style.backgroundColor="gray";
@@ -53,7 +53,7 @@ function tenColor(){
     if(time>10) {
         tenAM.style.backgroundColor="gray";
         tenAM.style.color="white";
-    } else if (time=9) {
+    } else if (time=10) {
         tenAM.style.backgroundColor="rgb(148, 58, 58)";
         tenAM.style.color="white";
     } else {
@@ -64,10 +64,10 @@ function tenColor(){
 tenColor();
 
 function elevenColor(){
-    if(time>10) {
+    if(time>11) {
         elevenAM.style.backgroundColor="gray";
         elevenAM.style.color="white";
-    } else if (time=9) {
+    } else if (time=11) {
         elevenAM.style.backgroundColor="rgb(148, 58, 58)";
         elevenAM.style.color="white";
     } else {

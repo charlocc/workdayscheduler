@@ -15,7 +15,7 @@ textarea {
   
 .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color:rgb(140, 169, 255);
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -43,7 +43,7 @@ textarea {
 }
   
 .past {
-    background-color: rgb(211, 151, 151);
+    background-color: rgb(148, 58, 58);
     color: white;
 }
   
@@ -70,7 +70,5 @@ textarea {
     transition: all 0.3s ease-in-out;
 }
 
-.wide{ 
-    width: 100%;
-}
+
   

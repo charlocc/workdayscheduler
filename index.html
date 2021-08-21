@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -23,46 +23,46 @@
       <!-- Timeblocks go here -->
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text nine-AM">
-          <h3 class="m-2">9 am</h3>
-            <input name="nineinput" id="9-am-input" type="text" class="form-control" placeholder="Tasks" aria-label="tasks input" value=""></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="nine-AM">
+            <h3 class="m-2">9 am</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text ten-AM">
-          <h3 class="m-2">10 am</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="ten-AM">
+            <h3 class="m-2">10 am</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text eleven-AM">
-          <h3 class="m-2">11 am</h3>
-            <input type="text" class="form-control userInput" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="eleven-AM">
+            <h3 class="m-2">11 am</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text twelve-PM ">
-          <h3 class="m-2">12 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="twelve-PM">
+            <h3 class="m-2">12 pm</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text one-PM">
-          <h3 class="m-2">1 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="one-PM">
+            <h3 class="m-2">1 pm</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
@@ -70,42 +70,41 @@
         <div class="row input-group">
           <div class="col-12 input-group-text two-PM ">
           <h3 class="m-2">2 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+            <textarea class="form-control tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text three-PM">
-          <h3 class="m-2">3 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="three-PM">
+            <h3 class="m-2">3 pm</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text four-PM">
-          <h3 class="m-2">4 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="four-PM">
+            <h3 class="m-2">4 pm</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
       <div class="m-2">
         <div class="row input-group">
-          <div class="col-12 input-group-text five-PM">
-          <h3 class="m-2">5 pm</h3>
-            <input type="text" class="form-control" placeholder="Tasks" aria-label="tasks input"></input>
-            <button class="btn m-2 btn-outline-secondary saveBtn" type="button" id="button-addon2">Save</button>
+          <div class="col-12 input-group-text" id="five-PM">
+            <h3 class="m-2">5 pm</h3>
+            <textarea class="form-control tasks" id="tasks" placeholder="Tasks" aria-label="tasks input"></textarea>
+            <button class="btn m-2 saveBtn fas fa-save" type="button" id="button-addon2"></button>
           </div>
         </div>
       </div>
-      
+      <script src="script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </main>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
 
