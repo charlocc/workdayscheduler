@@ -8,8 +8,7 @@
 * CSS
 * JavaScript
 
-
-## Acceptance Criteria
+## Usage
 When you open the planner, the current date and time is displayed at the top.
 When you scroll down, you will see timeblocks corresponding with standard business hours.
 Each timeblock is color coded to indicate whether it is in the past, present, or future. 
