@@ -19,7 +19,7 @@ Each timeblock is color coded to indicate whether it is in the past, present, or
 You can type in the time blocks and hit the save button to save that event in that time block. 
 To clear that event, just delete the text and save again.
 --- 
-https://charlocc.github.io/workdayscheduler/
+[Workday Scheduler](https://charlocc.github.io/workdayscheduler/)
 ![alt text](./screenshot.png)
 
 ## Licensing
